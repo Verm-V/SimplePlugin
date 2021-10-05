@@ -7,7 +7,8 @@ using Microsoft.Extensions.Hosting;
 using PingTimeOut.Infrastructure.Extensions;
 using PingTimeOut.Infrastructure.Settings.Implementations;
 using PingTimeOut.Infrastructure.Settings.Interfaces;
-using SimpleLibraryPlugin.Controllers;
+using FirstPlugin.Controllers;
+using SecondPlugin.Controllers;
 
 namespace PingTimeOut
 {
@@ -25,7 +26,7 @@ namespace PingTimeOut
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			var assembly = Assembly.GetAssembly(typeof(SimpleController));
+			var assembly = Assembly.GetAssembly(typeof(FirstPluginComplexController));
 			// Controllers
 			services
 				.AddControllers()

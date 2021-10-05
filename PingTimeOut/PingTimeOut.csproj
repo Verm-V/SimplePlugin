@@ -16,7 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SimpleLibraryPlugin\SimpleLibraryPlugin.csproj" />
+    <ProjectReference Include="..\FirstPlugin\FirstPlugin.csproj" />
+    <ProjectReference Include="..\SecondPlugin\SecondPlugin.csproj" />
+    <ProjectReference Include="..\SimpleLibraryPlugin\FirstPlugin.csproj" />
   </ItemGroup>
 
   <ItemGroup>
