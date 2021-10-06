@@ -25,6 +25,7 @@ namespace SecondPlugin.Controllers
 		[HttpGet("api/secondpluginsimple/ping")]
 		public IActionResult Ping()
 		{
+			_logger.LogDebug("SecondPluginSimple/Ping");
 			return Ok(_secondPluginService.GetValue());
 		}
 

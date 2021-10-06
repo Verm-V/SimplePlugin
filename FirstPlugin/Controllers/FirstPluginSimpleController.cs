@@ -25,6 +25,7 @@ namespace FirstPlugin.Controllers
 		[HttpGet("api/firstpluginsimple/ping")]
 		public IActionResult Ping()
 		{
+			_logger.LogDebug("FirstPluginSimple/Ping");
 			return Ok(_firstPluginService.GetValue());
 		}
 

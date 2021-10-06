@@ -1,14 +1,17 @@
+using System;
+using System.IO;
 using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PingTimeOut.Infrastructure.Extensions;
 using PingTimeOut.Infrastructure.Settings.Implementations;
 using PingTimeOut.Infrastructure.Settings.Interfaces;
-using FirstPlugin.Controllers;
-using SecondPlugin.Controllers;
+//using FirstPlugin.Controllers;
+//using SecondPlugin.Controllers;
 
 namespace PingTimeOut
 {
@@ -26,12 +29,27 @@ namespace PingTimeOut
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			var assembly = Assembly.GetAssembly(typeof(FirstPluginComplexController));
+			services.AddControllers();
+			//var assembly = Assembly.GetAssembly(typeof(FirstPluginComplexController));
 			// Controllers
+			var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+			var firstAssembly = System.Runtime.Loader
+				.AssemblyLoadContext.Default
+				.LoadFromAssemblyPath(Path.Combine(path, "FirstPlugin.dll"));
 			services
 				.AddControllers()
-				.AddApplicationPart(assembly)
+				.AddApplicationPart(firstAssembly)
 				.AddControllersAsServices();
+
+			var secondAssembly = System.Runtime.Loader
+				.AssemblyLoadContext.Default
+				.LoadFromAssemblyPath(Path.Combine(path, "SecondPlugin.dll"));
+			services
+				.AddControllers()
+				.AddApplicationPart(secondAssembly)
+				.AddControllersAsServices();
+
 
 			// Services
 			services.ConfigureServices();

@@ -29,6 +29,7 @@ namespace PingTimeOut.Controllers
 		[HttpGet("ping")]
 		public IActionResult Ping()
 		{
+			_logger.LogDebug($"Ping");
 			_pingService.PingSleep();
 			return Ok();
 		}
@@ -40,6 +41,7 @@ namespace PingTimeOut.Controllers
 		[HttpPost("setpingtimeout")]
 		public IActionResult SetPingTimeout([FromQuery] int timeout)
 		{
+			_logger.LogDebug($"Set timeout to {timeout}");
 			_pingService.SetPingTimeout(timeout);
 			return Ok();
 		}
@@ -50,6 +52,7 @@ namespace PingTimeOut.Controllers
 		[HttpGet("getpingtimeout")]
 		public IActionResult GetPingTimeout()
 		{
+			_logger.LogDebug($"Get timeout");
 			return new OkObjectResult(_pingService.GetPingTimeout());
 		}
 
