@@ -1,6 +1,6 @@
 using System;
 
-namespace SimpeWebApiApp
+namespace PingTimeOut
 {
 	public class WeatherForecast
 	{

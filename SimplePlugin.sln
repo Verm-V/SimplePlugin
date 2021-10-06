@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleLibraryPlugin", "SimpleLibraryPlugin\SimpleLibraryPlugin.csproj", "{9F64179F-3149-44A7-A2FD-A975A89FC8D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstPlugin", "FirstPlugin\FirstPlugin.csproj", "{9F64179F-3149-44A7-A2FD-A975A89FC8D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWebApiPlugin", "SimpleWebApiPlugin\SimpleWebApiPlugin.csproj", "{365A9DAE-02AC-40DC-8FCA-C6974F4C8F0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecondPlugin", "SecondPlugin\SecondPlugin.csproj", "{365A9DAE-02AC-40DC-8FCA-C6974F4C8F0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpeWebApiApp", "SimpeWebApiApp\SimpeWebApiApp.csproj", "{AB242BAE-268B-44C3-B11E-DE1CAEF1FBFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PingTimeOut", "PingTimeOut\PingTimeOut.csproj", "{09547299-984A-4E41-A8DB-39D311C62BE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{365A9DAE-02AC-40DC-8FCA-C6974F4C8F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{365A9DAE-02AC-40DC-8FCA-C6974F4C8F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{365A9DAE-02AC-40DC-8FCA-C6974F4C8F0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB242BAE-268B-44C3-B11E-DE1CAEF1FBFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB242BAE-268B-44C3-B11E-DE1CAEF1FBFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB242BAE-268B-44C3-B11E-DE1CAEF1FBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB242BAE-268B-44C3-B11E-DE1CAEF1FBFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09547299-984A-4E41-A8DB-39D311C62BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09547299-984A-4E41-A8DB-39D311C62BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09547299-984A-4E41-A8DB-39D311C62BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09547299-984A-4E41-A8DB-39D311C62BE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
