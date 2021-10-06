@@ -10,12 +10,10 @@ namespace FirstPlugin.Controllers
 
 	public class FirstPluginSimpleController : ControllerBase
 	{
-		private readonly ILogger<FirstPluginSimpleController> _logger;
 		private readonly IFirstPluginService _firstPluginService;
 
-		public FirstPluginSimpleController(ILogger<FirstPluginSimpleController> logger)
+		public FirstPluginSimpleController()
 		{
-			_logger = logger;
 			_firstPluginService = new FirstPluginService();
 		}
 
@@ -25,7 +23,6 @@ namespace FirstPlugin.Controllers
 		[HttpGet("api/firstpluginsimple/ping")]
 		public IActionResult Ping()
 		{
-			_logger.LogDebug("FirstPluginSimple/Ping");
 			return Ok(_firstPluginService.GetValue());
 		}
 
