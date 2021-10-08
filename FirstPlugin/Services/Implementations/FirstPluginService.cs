@@ -1,14 +1,17 @@
 ﻿using System;
+using System.Reflection;
 using FirstPlugin.Services.Interfaces;
 
 namespace FirstPlugin.Services.Implementations
 {
 	class FirstPluginService : IFirstPluginService
 	{
+		private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+
 		public string GetValue()
 		{
-			Console.WriteLine("Service from First Plugin work V0.4.1");
-			return "value from First Plugin v0.4.1";
+			Console.WriteLine($"{VERSION} First Plugin Service work");
+			return $"{VERSION} value from First Plugin";
 		}
 	}
 }

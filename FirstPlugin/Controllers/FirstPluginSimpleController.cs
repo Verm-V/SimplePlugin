@@ -1,4 +1,6 @@
-﻿using FirstPlugin.Services.Implementations;
+﻿using System;
+using System.Reflection;
+using FirstPlugin.Services.Implementations;
 using FirstPlugin.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -10,6 +12,7 @@ namespace FirstPlugin.Controllers
 
 	public class FirstPluginSimpleController : ControllerBase
 	{
+		private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 		private readonly IFirstPluginService _firstPluginService;
 
 		public FirstPluginSimpleController()
@@ -23,6 +26,8 @@ namespace FirstPlugin.Controllers
 		[HttpGet("api/firstpluginsimple/ping")]
 		public IActionResult Ping()
 		{
+			Console.WriteLine(string.Empty);
+			Console.WriteLine($"{VERSION} First Plugin Complex Controller work");
 			return Ok(_firstPluginService.GetValue());
 		}
 

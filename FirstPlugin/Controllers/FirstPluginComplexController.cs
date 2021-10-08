@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Logging;
 using SecondPlugin.Services.Interfaces;
 using SecondPlugin.Services.Implementations;
+using System;
+using System.Reflection;
 
 namespace FirstPlugin.Controllers
 {
@@ -10,6 +12,7 @@ namespace FirstPlugin.Controllers
 
 	public class FirstPluginComplexController : ControllerBase
 	{
+		private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 		private readonly ISecondPluginService _secondPluginService;
 
 		public FirstPluginComplexController()
@@ -23,6 +26,8 @@ namespace FirstPlugin.Controllers
 		[HttpGet("api/firstplugincomplex/ping")]
 		public IActionResult Ping()
 		{
+			Console.WriteLine(string.Empty);
+			Console.WriteLine($"{VERSION} First Plugin Simple Controller work");
 			return Ok(_secondPluginService.GetValue().ToString());
 		}
 

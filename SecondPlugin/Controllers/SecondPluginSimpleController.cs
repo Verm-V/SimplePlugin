@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Reflection;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SecondPlugin.Services.Implementations;
 using SecondPlugin.Services.Interfaces;
@@ -10,6 +12,7 @@ namespace SecondPlugin.Controllers
 
 	public class SecondPluginSimpleController : ControllerBase
 	{
+		private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 		private readonly ISecondPluginService _secondPluginService;
 
 		public SecondPluginSimpleController()
@@ -23,6 +26,8 @@ namespace SecondPlugin.Controllers
 		[HttpGet("api/secondpluginsimple/ping")]
 		public IActionResult Ping()
 		{
+			Console.WriteLine(string.Empty);
+			Console.WriteLine($"{VERSION} Second Plugin Simple Controller work");
 			return Ok(_secondPluginService.GetValue());
 		}
 
