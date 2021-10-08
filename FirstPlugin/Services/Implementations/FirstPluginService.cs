@@ -6,7 +6,7 @@ namespace FirstPlugin.Services.Implementations
 	{
 		public string GetValue()
 		{
-			return "value from First Plugin";
+			return "value from First Plugin v0.3.1";
 		}
 	}
 }

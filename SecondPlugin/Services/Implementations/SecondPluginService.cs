@@ -6,7 +6,7 @@ namespace SecondPlugin.Services.Implementations
 	{
 		public string GetValue()
 		{
-			return "value from Second Plugin";
+			return "value from Second Plugin v0.3.1";
 		}
 	}
 }

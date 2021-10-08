@@ -10,12 +10,10 @@ namespace SecondPlugin.Controllers
 
 	public class SecondPluginSimpleController : ControllerBase
 	{
-		private readonly ILogger<SecondPluginSimpleController> _logger;
 		private readonly ISecondPluginService _secondPluginService;
 
-		public SecondPluginSimpleController(ILogger<SecondPluginSimpleController> logger)
+		public SecondPluginSimpleController()
 		{
-			_logger = logger;
 			_secondPluginService = new SecondPluginService();
 		}
 
@@ -25,7 +23,6 @@ namespace SecondPlugin.Controllers
 		[HttpGet("api/secondpluginsimple/ping")]
 		public IActionResult Ping()
 		{
-			_logger.LogDebug("SecondPluginSimple/Ping");
 			return Ok(_secondPluginService.GetValue());
 		}
 
