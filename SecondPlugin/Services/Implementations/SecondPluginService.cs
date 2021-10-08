@@ -1,4 +1,5 @@
-﻿using SecondPlugin.Services.Interfaces;
+﻿using System;
+using SecondPlugin.Services.Interfaces;
 
 namespace SecondPlugin.Services.Implementations
 {
@@ -6,7 +7,8 @@ namespace SecondPlugin.Services.Implementations
 	{
 		public string GetValue()
 		{
-			return "value from Second Plugin v0.3.1";
+			Console.WriteLine("Service from Second Plugin work V0.4.0");
+			return "value from Second Plugin v0.4.0";
 		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using FirstPlugin.Services.Interfaces;
+﻿using System;
+using FirstPlugin.Services.Interfaces;
 
 namespace FirstPlugin.Services.Implementations
 {
@@ -6,7 +7,8 @@ namespace FirstPlugin.Services.Implementations
 	{
 		public string GetValue()
 		{
-			return "value from First Plugin v0.3.1";
+			Console.WriteLine("Service from First Plugin work V0.4.0");
+			return "value from First Plugin v0.4.0";
 		}
 	}
 }
