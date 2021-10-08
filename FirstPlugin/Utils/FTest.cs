@@ -8,7 +8,7 @@ namespace FirstPlugin.Utils
 	{
 		public void ConsoleWrite()
 		{
-			Console.WriteLine("First Plugin Test Method V0.4.0");
+			Console.WriteLine("First Plugin Test Method V0.4.1");
 		}
 	}
 }

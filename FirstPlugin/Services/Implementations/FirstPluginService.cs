@@ -7,8 +7,8 @@ namespace FirstPlugin.Services.Implementations
 	{
 		public string GetValue()
 		{
-			Console.WriteLine("Service from First Plugin work V0.4.0");
-			return "value from First Plugin v0.4.0";
+			Console.WriteLine("Service from First Plugin work V0.4.1");
+			return "value from First Plugin v0.4.1";
 		}
 	}
 }

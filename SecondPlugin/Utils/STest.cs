@@ -8,7 +8,7 @@ namespace SecondPlugin.Utils
 	{
 		public void ConsoleWrite()
 		{
-			Console.WriteLine("Second Plugin Test Method V0.4.0");
+			Console.WriteLine("Second Plugin Test Method V0.4.1");
 		}
 	}
 }

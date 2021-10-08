@@ -7,8 +7,8 @@ namespace SecondPlugin.Services.Implementations
 	{
 		public string GetValue()
 		{
-			Console.WriteLine("Service from Second Plugin work V0.4.0");
-			return "value from Second Plugin v0.4.0";
+			Console.WriteLine("Service from Second Plugin work V0.4.1");
+			return "value from Second Plugin v0.4.1";
 		}
 	}
 }
