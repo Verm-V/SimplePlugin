@@ -4,7 +4,7 @@ using SecondPlugin.Services.Interfaces;
 
 namespace SecondPlugin.Services.Implementations
 {
-	public class SecondPluginService : ISecondPluginService
+	class SecondPluginService : ISecondPluginService
 	{
 		private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 

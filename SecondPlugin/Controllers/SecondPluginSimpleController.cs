@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using SecondPlugin.Services.Implementations;
 using SecondPlugin.Services.Interfaces;
 
 namespace SecondPlugin.Controllers
@@ -15,9 +13,9 @@ namespace SecondPlugin.Controllers
 		private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 		private readonly ISecondPluginService _secondPluginService;
 
-		public SecondPluginSimpleController()
+		public SecondPluginSimpleController(ISecondPluginService secondPluginService)
 		{
-			_secondPluginService = new SecondPluginService();
+			_secondPluginService = secondPluginService;
 		}
 
 		/// <summary>

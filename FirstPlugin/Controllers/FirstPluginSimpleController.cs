@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Reflection;
-using FirstPlugin.Services.Implementations;
 using FirstPlugin.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace FirstPlugin.Controllers
 {
@@ -15,9 +13,9 @@ namespace FirstPlugin.Controllers
 		private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 		private readonly IFirstPluginService _firstPluginService;
 
-		public FirstPluginSimpleController()
+		public FirstPluginSimpleController(IFirstPluginService firstPluginService)
 		{
-			_firstPluginService = new FirstPluginService();
+			_firstPluginService = firstPluginService;
 		}
 
 		/// <summary>

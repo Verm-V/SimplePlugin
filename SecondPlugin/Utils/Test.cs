@@ -1,18 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
+using RDEV.Web.Models.Methods;
+using SecondPlugin.Services.Interfaces;
 
 namespace SecondPlugin.Utils
 {
 	public class Test
 	{
 		private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+		private readonly ISecondPluginService _secondPluginService;
 
-		public void ConsoleWrite()
+		public Test(ISecondPluginService secondPluginService)
+		{
+			_secondPluginService = secondPluginService;
+		}
+
+		/// <summary>
+		/// Простой метод не использующий другие методы
+		/// </summary>
+		/// <returns></returns>
+		public MethodResult SimpleTest()
 		{
 			Console.WriteLine(string.Empty);
 			Console.WriteLine($"{VERSION} Second Plugin Test Method");
+			return new MethodResult(true, string.Empty, $"{VERSION} Успешно");
+		}
+
+		/// <summary>
+		/// Метод использующий сервис этого плагина через DI
+		/// </summary>
+		/// <returns></returns>
+		public MethodResult SimpleServiceTest()
+		{
+			Console.WriteLine(string.Empty);
+			var value = _secondPluginService.GetValue();
+			Console.WriteLine(value);
+			Console.WriteLine($"{VERSION} Second Plugin Service test");
+			return new MethodResult(true, value.ToString(), $"{VERSION} Успешно");
 		}
 	}
 }
