@@ -49,9 +49,9 @@ namespace FirstPlugin.Utils
 		public MethodResult SimpleServiceTest()
 		{
 			Console.WriteLine(string.Empty);
-			var value = _firstPluginService.GetValue();
+			string value = _firstPluginService.GetValue();
 			Console.WriteLine($"{VERSION} SimpleServiceTest из FirstPlugin отработал");
-			return new MethodResult(true, string.Empty, $"{VERSION} Успешно. Получена строка: '{value}'");
+			return new MethodResult(true, string.Empty, $"{VERSION} Успешно. Получена строка: {value}");
 		}
 
 		/// <summary>
@@ -61,9 +61,9 @@ namespace FirstPlugin.Utils
 		public MethodResult ComplexServiceTest()
 		{
 			Console.WriteLine(string.Empty);
-			var value = _secondTest.SimpleServiceTest();
+			MethodResult value = _secondTest.SimpleServiceTest();
 			Console.WriteLine($"{VERSION} ComplexServiceTest из FirstPlugin отработал");
-			return new MethodResult(true, string.Empty, $"{VERSION} Успешно. Получена строка: '{value.Message}'");
+			return new MethodResult(true, string.Empty, $"{VERSION} Успешно. Получена строка: {value.Message}");
 		}
 
 	}

@@ -33,9 +33,9 @@ namespace SecondPlugin.Utils
 		public MethodResult SimpleServiceTest()
 		{
 			Console.WriteLine(string.Empty);
-			var value = _secondPluginService.GetValue();
+			string value = _secondPluginService.GetValue();
 			Console.WriteLine($"{VERSION} SimpleServiceTest из SecondPlugin отработал");
-			return new MethodResult(true, value.ToString(), $"{VERSION} Успешно. Получено значение: '{value}'");
+			return new MethodResult(true, value.ToString(), $"{VERSION} Успешно. Получено значение: {value}");
 		}
 	}
 }
