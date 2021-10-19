@@ -25,7 +25,7 @@ namespace SecondPlugin.Controllers
 		public IActionResult Ping()
 		{
 			Console.WriteLine(string.Empty);
-			Console.WriteLine($"{VERSION} Second Plugin Simple Controller work");
+			Console.WriteLine($"{VERSION} Контроллер SecondPluginSimpleController из SecondPlugin отработал.");
 			return Ok(_secondPluginService.GetValue());
 		}
 

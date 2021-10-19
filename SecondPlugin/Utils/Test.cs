@@ -22,7 +22,7 @@ namespace SecondPlugin.Utils
 		public MethodResult SimpleTest()
 		{
 			Console.WriteLine(string.Empty);
-			Console.WriteLine($"{VERSION} Second Plugin Test Method");
+			Console.WriteLine($"{VERSION} SimpleTest из SecondPlugin отработал");
 			return new MethodResult(true, string.Empty, $"{VERSION} Успешно");
 		}
 
@@ -34,9 +34,8 @@ namespace SecondPlugin.Utils
 		{
 			Console.WriteLine(string.Empty);
 			var value = _secondPluginService.GetValue();
-			Console.WriteLine(value);
-			Console.WriteLine($"{VERSION} Second Plugin Service test");
-			return new MethodResult(true, value.ToString(), $"{VERSION} Успешно");
+			Console.WriteLine($"{VERSION} SimpleServiceTest из SecondPlugin отработал");
+			return new MethodResult(true, value.ToString(), $"{VERSION} Успешно. Получено значение: '{value}'");
 		}
 	}
 }

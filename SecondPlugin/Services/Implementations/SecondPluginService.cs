@@ -10,8 +10,8 @@ namespace SecondPlugin.Services.Implementations
 
 		public string GetValue()
 		{
-			Console.WriteLine($"{VERSION} Second Plugin Service work");
-			return $"{VERSION} value from Second Plugin";
+			Console.WriteLine($"{VERSION} Сервис SecondPluginService отработал");
+			return $"{VERSION} значение полученное из сервиса SecondPlugin";
 		}
 	}
 }

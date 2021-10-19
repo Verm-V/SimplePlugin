@@ -15,8 +15,8 @@ namespace SecondPlugin.Utils
 		public MethodResult SimpleTestNoDI()
 		{
 			Console.WriteLine(string.Empty);
-			Console.WriteLine($"{VERSION} Second Plugin Test no DI");
-			return new MethodResult(true, $"{VERSION} Value from Second Plugin Test no DI", $"{VERSION} Успешно");
+			Console.WriteLine($"{VERSION} SimpleTestNoDI из SecondPlugin отработал");
+			return new MethodResult(true, $"{VERSION} значение из SecondPlugin ", $"{VERSION} Успешно");
 		}
 	}
 }

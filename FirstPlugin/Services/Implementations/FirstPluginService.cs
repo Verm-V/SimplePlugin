@@ -10,8 +10,8 @@ namespace FirstPlugin.Services.Implementations
 
 		public string GetValue()
 		{
-			Console.WriteLine($"{VERSION} First Plugin Service work");
-			return $"{VERSION} value from First Plugin";
+			Console.WriteLine($"{VERSION} Сервис FirstPluginService отработал");
+			return $"{VERSION} значение полученное из сервиса FirstPlugin";
 		}
 	}
 }

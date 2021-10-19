@@ -18,7 +18,7 @@ namespace FirstPlugin.Controllers
 		public IActionResult Ping()
 		{
 			Console.WriteLine(string.Empty);
-			Console.WriteLine($"{VERSION} First Plugin Simple Controller work");
+			Console.WriteLine($"{VERSION} Контроллер FirstPluginComplexController из FirstPlugin отработал.");
 			var result = new SecondPlugin.Utils.TestNoDI().SimpleTestNoDI();
 			return Ok(result.Message);
 

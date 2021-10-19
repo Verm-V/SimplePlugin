@@ -25,7 +25,7 @@ namespace FirstPlugin.Controllers
 		public IActionResult Ping()
 		{
 			Console.WriteLine(string.Empty);
-			Console.WriteLine($"{VERSION} First Plugin Complex Controller work");
+			Console.WriteLine($"{VERSION} Контроллер FirstPluginSimpleController из FirstPlugin отработал.");
 			return Ok(_firstPluginService.GetValue());
 		}
 

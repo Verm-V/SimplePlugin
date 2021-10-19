@@ -21,13 +21,13 @@ namespace FirstPlugin.Utils
 		}
 		
 		/// <summary>
-		/// Простой тест не использующий другие методы
+		/// Простой метод не использующий другие методы
 		/// </summary>
 		/// <returns></returns>
 		public MethodResult SimpleTest()
 		{
 			Console.WriteLine(string.Empty);
-			Console.WriteLine($"{VERSION} First Plugin Test Method");
+			Console.WriteLine($"{VERSION} SimpleTest из FirstPlugin отработал");
 			return new MethodResult(true, string.Empty, $"{VERSION} Успешно");
 		}
 
@@ -38,7 +38,7 @@ namespace FirstPlugin.Utils
 		public MethodResult ComplexTest()
 		{
 			_secondTest.SimpleTest();
-			Console.WriteLine($"{VERSION} SecondPlugin Test method called from FirstPlugin");
+			Console.WriteLine($"{VERSION} ComplexTest из FirstPlugin отработал");
 			return new MethodResult(true, string.Empty, $"{VERSION} Успешно");
 		}
 
@@ -50,9 +50,8 @@ namespace FirstPlugin.Utils
 		{
 			Console.WriteLine(string.Empty);
 			var value = _firstPluginService.GetValue();
-			Console.WriteLine(value);
-			Console.WriteLine($"{VERSION} First Plugin Service test");
-			return new MethodResult(true, string.Empty, $"{VERSION} Успешно");
+			Console.WriteLine($"{VERSION} SimpleServiceTest из FirstPlugin отработал");
+			return new MethodResult(true, string.Empty, $"{VERSION} Успешно. Получена строка: '{value}'");
 		}
 
 		/// <summary>
@@ -63,9 +62,8 @@ namespace FirstPlugin.Utils
 		{
 			Console.WriteLine(string.Empty);
 			var value = _secondTest.SimpleServiceTest();
-			Console.WriteLine(value);
-			Console.WriteLine($"{VERSION} Second Plugin Service test called from FirsPlugin");
-			return new MethodResult(true, string.Empty, $"{VERSION} Успешно. Получена строка: {value.Message}");
+			Console.WriteLine($"{VERSION} ComplexServiceTest из FirstPlugin отработал");
+			return new MethodResult(true, string.Empty, $"{VERSION} Успешно. Получена строка: '{value.Message}'");
 		}
 
 	}
